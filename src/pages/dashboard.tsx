@@ -38,8 +38,6 @@ const Dashboard: React.FC = () => {
     navigate("/"); 
   };
 
-  console.log("data:", info);
-
   if (!info)
     return (
       <div className="flex flex-col items-center justify-center w-full h-screen mx-auto">
@@ -48,16 +46,21 @@ const Dashboard: React.FC = () => {
     );
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-screen mx-auto">
-      <h1 className="mb-3 font-bold">
-        Welcome {info.first_name}
-        {info.last_name}
+    <div className="relative flex flex-col items-center justify-center w-full h-screen mx-auto pt-12">
+      <img
+        src="/images/vector.png"
+        alt="Background"
+        className="absolute inset-0 w-full h-full object-cover opacity-60 rounded-full z-0"
+      />
+      <div className="absolute inset-0 bg-white opacity-70 rounded-full z-0"></div>
+      <h1 className="mb-3 font-bold z-10">
+        Welcome {info.first_name} {info.last_name}
       </h1>
       <UserCard user={info} />
       <Button
         variant="danger"
         onClick={handleLogout}
-        className="mt-4 px-4 py-2 bg-red-600 text-white rounded"
+        className="mt-4 px-4 py-2 bg-red-600 text-white rounded z-10"
       >
         Logout
       </Button>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-
 import Token from "./components/token";
 import WelcomePage from './pages/welcome-page';
 import Dashboard from './pages/dashboard';

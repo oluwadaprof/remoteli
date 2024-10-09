@@ -8,7 +8,7 @@ type UserCardProps = {
 
 export const UserCard: React.FC<UserCardProps> = ({ user }) => {
   return (
-    <div className="max-w-lg w-full mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className="max-w-lg w-full mx-auto bg-white shadow-lg rounded-lg overflow-hidden z-10">
       <div className="bg-gray-800 p-4 text-white">
         <h2 className="text-2xl font-bold">{`${user.first_name} ${user.last_name}`}</h2>
         <p className="text-sm">{user.email}</p>

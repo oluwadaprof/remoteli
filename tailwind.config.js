@@ -4,7 +4,14 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        'spin-slow': 'spin 3s linear infinite', // Adjust the duration as needed
+        'spin-slow': 'spin 3s linear infinite',
+        fadeIn: 'fadeIn 1s ease-in-out forwards',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
       },
     },
   },
